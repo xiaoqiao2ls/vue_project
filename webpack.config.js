@@ -64,6 +64,27 @@ module.exports = {
                         {loader:'url-loader',options:{limit:5000}},
                         'image-webpack-loader'
                     ]
+                },
+                {
+                    //转换js脚本为es5语法
+                    test:/\.js&/,
+                    exclude:/node_modules/,
+                    use:[
+                        {
+                            loader:"babel-loader",
+                            options:{
+                                presets:["es2015"],
+                                plugins:["transform-runtime"]
+                            }
+                        }
+                    ]
+                },
+                //配置vue解析文件
+                {
+                    test:/\.vue$/,
+                    use:[
+                        "vue-loader"
+                    ]
                 }
             ]
     }
