@@ -5,10 +5,15 @@
 import Vue from 'vue';
 import VueRouter from "vue-router";
 import VueResource from "vue-resource";
+import MintUI from "mint-ui";
+import "mint-ui/lib/style.css";
+import "mui/dist/css/mui.css";  //mui只能引用样式
+import  "mui/examples/hello-mui/css/icons-extra.css"; //引入额外扩展样式
 
 //1.2手动启用插件
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(MintUI);
 
 //2.导入自己的东西
 

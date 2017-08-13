@@ -1,18 +1,20 @@
 <template>
 
-    <section>
-        <h3>这里是app的首页</h3>
-    </section>
+    <article class="index">
+        <v-swipe></v-swipe>
+        <v-nav></v-nav>
+    </article>
 
 </template>
 
 <script>
+    import Cswipe from "./swipe.vue";
+    import Cnav from "./nav.vue";
 
     export default {
-        data(){
-            return{
-
-            }
+        components:{
+            'v-swipe':Cswipe,
+            'v-nav':Cnav
         }
     }
 

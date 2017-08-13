@@ -1,7 +1,8 @@
 <template>
     <!-- 组件中的模版全部写到这里，vue最终自动关联 -->
-    <header>
-        <h2>这里是app的头部</h2>
+    <header class="header">
+        <mt-header fixed title="微商"></mt-header>
+        <div></div>
     </header>
 </template>
 
@@ -18,4 +19,7 @@
 
 <style>
     /* 这里书写组件的样式 */
+    .header div {
+        height: 40px;
+    }
 </style>
