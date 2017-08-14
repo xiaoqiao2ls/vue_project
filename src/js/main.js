@@ -16,7 +16,7 @@ Vue.use(VueResource);
 Vue.use(MintUI);
 
 //2.导入自己的东西
-
+import "./filter.js";
 //2.1导入自己的组件；
 import App  from "../component/App.vue"; //根组件
 //2.2导入配置好的路由对象

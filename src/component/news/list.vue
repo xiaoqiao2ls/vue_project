@@ -9,7 +9,7 @@
                     <div class="mui-media-body">
                         <p class="mui-ellipsis">{{item.title}}</p>
                         <div class="list_item">
-                            <p>创建时间:{{item.add_time}}</p>
+                            <p>创建时间:{{item.add_time | formatDate('YYYY-MM-DD')}}</p>
                             <p>点击量:{{item.click}}</p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                 let url = config.newsList;
                 this.$http.get(url).then(rep => {
                     rep.body.status == 0 && (this.list = rep.body.message)
-                    console.log(this.list);
+//                    console.log(this.list);
                 })
             }
         },
@@ -49,6 +49,11 @@
     }
 </script>
 
-<style>
+<style lang="less">
     /* 这里书写组件的样式 */
+    .list {
+        &_item p {
+             display: inline-block;
+         }
+    }
 </style>

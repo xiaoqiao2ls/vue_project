@@ -11,6 +11,8 @@
   "author": "xiaoqiao",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "mint-ui": "^2.2.9",
     "mui": "git+https://github.com/dcloudio/mui.git",
     "vue": "^2.4.2",
