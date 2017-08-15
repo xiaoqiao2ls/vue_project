@@ -9,7 +9,7 @@
                 </router-link>
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                <router-link to="/img/123/123/123">
+                <router-link to="/img/list">
                     <span class="mui-icon mui-icon-image"></span>
                     <div class="mui-media-body">图片分享</div>
                 </router-link>
