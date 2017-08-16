@@ -15,6 +15,10 @@ import CnewsDetails from "../component/news/details.vue";
 //导入图片列表组件
 import CimgList from "../component/img/list.vue";
 
+//导入s商品列表组件
+import CgoodsList from "../component/goods/list.vue";
+import CgoodsDetails from "../component/goods/details.vue";
+
 //导出一个路由实例
 export default new VueRouter({
     routes:[
@@ -24,6 +28,9 @@ export default new VueRouter({
         {path:"/news/list",component:CnewList},
         {path:"/news/details/:id",component:CnewsDetails},
         //图片列表路由
-        {path:"/img/list",component:CimgList},
+        {path:"/img/list/:id",component:CimgList,name:'imgL'},
+        // 商品购买
+        { path: '/goods/list', component: CgoodsList, name: 'goodsL' },
+        { path: '/goods/details/:id', component: CgoodsDetails, name: 'goodsD' },
     ]
 })

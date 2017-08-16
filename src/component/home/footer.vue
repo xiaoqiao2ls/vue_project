@@ -9,13 +9,13 @@
             <!--<a  href="#tabbar">-->
 
             <!--</a>-->
-            <a class="mui-tab-item" href="#tabbar-with-chat">
+            <router-link to="/goods/list" class="mui-tab-item" href="#tabbar-with-chat">
                 <span class="mui-icon mui-icon-extra mui-icon-extra-gift"></span>
                 <span class="mui-tab-label">商品购买</span>
-            </a>
+            </router-link>
             <a class="mui-tab-item" href="#tabbar-with-contact">
                 <span class="mui-icon mui-icon-extra mui-icon-extra-express">
-                    <span class="mui-badge">0</span>
+                    <span class="mui-badge">{{total}}</span>
                 </span>
                 <span class="mui-tab-label">购物车</span>
             </a>
@@ -30,10 +30,12 @@
 </template>
 
 <script>
+    import goodStorage from "../../js/model/goods.js";
     export default {
         data(){
             return {
                 ////这里输入组件内容
+                total:goodStorage.get()
             }
         }
     }
