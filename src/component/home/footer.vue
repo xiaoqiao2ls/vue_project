@@ -13,12 +13,12 @@
                 <span class="mui-icon mui-icon-extra mui-icon-extra-gift"></span>
                 <span class="mui-tab-label">商品购买</span>
             </router-link>
-            <a class="mui-tab-item" href="#tabbar-with-contact">
+            <router-link to="/shopcart/list" class="mui-tab-item" href="#tabbar-with-contact">
                 <span class="mui-icon mui-icon-extra mui-icon-extra-express">
                     <span class="mui-badge">{{total}}</span>
                 </span>
                 <span class="mui-tab-label">购物车</span>
-            </a>
+            </router-link>
             <a class="mui-tab-item" href="#tabbar-with-map">
                 <span class="mui-icon mui-icon-contact"></span>
                 <span class="mui-tab-label">消息中心</span>

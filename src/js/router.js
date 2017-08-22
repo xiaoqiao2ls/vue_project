@@ -18,6 +18,12 @@ import CimgList from "../component/img/list.vue";
 //导入s商品列表组件
 import CgoodsList from "../component/goods/list.vue";
 import CgoodsDetails from "../component/goods/details.vue";
+//购物车
+import CshopcartList from "../component/shopcart/list.vue";
+//订单详情页
+import Corder from "../component/shopcart/order.vue";
+//登录页面
+import Clogin from "../component/user/login.vue";
 
 //导出一个路由实例
 export default new VueRouter({
@@ -32,5 +38,11 @@ export default new VueRouter({
         // 商品购买
         { path: '/goods/list', component: CgoodsList, name: 'goodsL' },
         { path: '/goods/details/:id', component: CgoodsDetails, name: 'goodsD' },
+        //购物车
+        { path: '/shopcart/list', component: CshopcartList, name: 'shopcartL' },
+        //订单详情页
+        {path:'/shopcart/order',component:Corder,name:'shopOrderD'},
+        //登录页面
+        {path:'/user/login',component:Clogin,name:'loginL'}
     ]
 })

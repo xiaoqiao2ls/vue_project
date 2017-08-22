@@ -7,7 +7,7 @@ export default  {
     set(key,data){
         let strData;
         try{
-            strData = Object.toString(data);
+            strData =JSON.stringify(data);
         }catch(e){
             strData = data;
         } finally{

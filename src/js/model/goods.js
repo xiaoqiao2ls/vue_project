@@ -3,9 +3,9 @@
  */
 
 import storage from "../common/storage.js";
-const storageKye = "suiyi";
+const storageKye = "goodsTotal";
 
-let goodsTotal = storage.get(storageKye);
+let goodsTotal = storage.get(storageKye) || {};
 // 商品购买数量的数据格式为：{ id1: total, id2: total, id3: total }
 // key为商品的id，value为商品的选择数量。
 export default {
@@ -35,6 +35,12 @@ export default {
     //获取total组成的数组
     getTotalList(){
         return Object.values(goodsTotal)
+    },
+
+    //删除商品
+    remove(id){
+        delete goodsTotal[id];
+        storage.set(storageKye,goodsTotal);
     }
 
 }
